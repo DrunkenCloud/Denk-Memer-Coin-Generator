@@ -6,6 +6,7 @@ from pynput.keyboard import Key, Controller as KeyboardController
 from pynput.mouse import Button, Controller as MouseController
 keyboard = KeyboardController()
 mouse = MouseController()
+i = 0
 
 def fun():
     time.sleep(4)
@@ -45,6 +46,12 @@ def fun():
     time.sleep(4)
     keyboard.type('pls dep all')
     keyboard.press(Key.enter)
+    if i == 46:
+        keyboard.type('pls use horse')
+        i=0
+    else:
+        i+=1
+
 
 num = 2 #Bassically the number of times u want this code to run. One round is 35 seconds
 
